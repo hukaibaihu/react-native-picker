@@ -1,6 +1,4 @@
-# react-native-picker
-
-[![npm version](https://img.shields.io/npm/v/react-native-picker.svg?style=flat-square)](https://www.npmjs.com/package/react-native-picker) <a href="https://david-dm.org/beefe/react-native-picker"><img src="https://david-dm.org/beefe/react-native-picker.svg?style=flat-square" alt="dependency status"></a>   
+# @ste7en/react-native-picker
 
 ![ui3](./doc/ui3.jpg)
 ![ui4](./doc/ui4.jpg)
@@ -47,19 +45,22 @@
 
 ### Usage
 
-#### Step 1 - install
+#### install
 
-```javascript
-	npm install react-native-picker --save
+```bash
+	npm install @ste7en/react-native-picker --save
+```
+```bash
+	yarn add @ste7en/react-native-picker
 ```
 
-#### Step 2 - link
+#### Manual link(RN<0.60)
 
 ```
 	react-native link
 ```
 
-#### Step 3 - import and use in project
+#### use in project
 
 ```javascript
 import Picker from 'react-native-picker';
@@ -82,13 +83,13 @@ Picker.init({
     }
 });
 Picker.show();
-	
+
 ```
 
 ### Integration With Existing Apps (`iOS`)
 The `Podfile` will like below:
 ``` ruby
-platform :ios, '8.0'
+platform :ios, '9.0'
 target 'YourTarget' do
     pod 'React', :path => '../YOUR_REACT_NATIVE_PROJECT/node_modules/react-native', :subspecs => [
     'Core',
@@ -193,3 +194,11 @@ pickerData = [
     ...
 ]
 ```
+
+### License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+### Important
+
+Origin repo: [beefe/react-native-picker](https://github.com/beefe/react-native-picker)

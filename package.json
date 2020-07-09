@@ -1,16 +1,26 @@
 {
-  "name": "react-native-picker",
-  "version": "5.0.0",
+  "name": "@ste7en/react-native-picker",
+  "version": "1.0.0",
   "description": "A Native Picker with high performance.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
+    "trypublish": "npm publish --access=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:hukaibaihu/react-native-picker.git"
   },
+  "files": [
+    "android",
+    "doc",
+    "ios",
+    "index.js",
+    "index.d.ts",
+    "Picker.podspec",
+    "README.md"
+  ],
   "author": "hukaibaihu",
   "license": "MIT",
   "homepage": "https://github.com/hukaibaihu/react-native-picker"
