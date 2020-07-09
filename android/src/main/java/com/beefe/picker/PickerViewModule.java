@@ -1,12 +1,12 @@
 package com.beefe.picker;
 
-import android.content.res.AssetManager;
+import android.annotation.Nullable;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
@@ -33,6 +33,8 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
+
+import java.lang.ArrayIndexOutOfBoundsException;
 
 import java.util.ArrayList;
 
@@ -303,7 +305,12 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
             ReadableArray pickerData = options.getArray(PICKER_DATA);
 
             int pickerViewHeight;
-            String name = pickerData.getType(0).name();
+            String name = "";
+            try {
+                pickerData.getType(0).name();
+            } catch (ArrayIndexOutOfBoundsException e) {
+                e.printStackTrace();
+            }
             switch (name) {
                 case "Map":
                     curStatus = 1;

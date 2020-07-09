@@ -193,5 +193,3 @@ pickerData = [
     ...
 ]
 ```
-
-### For pure javascript version -> [v3.0.5](https://github.com/beefe/react-native-picker/tree/pure-javascript-version)  

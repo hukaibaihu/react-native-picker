@@ -26,12 +26,15 @@ project.xcworkspace
 #
 .idea
 .gradle
+.project
+.settings
 local.properties
 
 # node.js
 #
 node_modules/
 npm-debug.log
+yarn-error.log
 
 # BUCK
 buck-out/
