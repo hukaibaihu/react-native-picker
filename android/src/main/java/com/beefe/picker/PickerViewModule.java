@@ -1,6 +1,5 @@
 package com.beefe.picker;
 
-import android.annotation.Nullable;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.res.AssetManager;
@@ -15,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.os.Build;
+import androidx.annotation.Nullable;
 
 import com.beefe.picker.util.MIUIUtils;
 import com.beefe.picker.view.OnSelectedListener;
@@ -79,7 +79,7 @@ import static android.graphics.Color.argb;
  */
 
 public class PickerViewModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
-    
+
     private static final String FONTS = "fonts/";
     private static final String OTF = ".otf";
     private static final String TTF = ".ttf";
@@ -415,7 +415,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                     layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
                     layoutParams.height = height;
                     layoutParams.gravity = Gravity.BOTTOM;
-                    window.setAttributes(layoutParams);   
+                    window.setAttributes(layoutParams);
                 }
             } else {
                 dialog.dismiss();
