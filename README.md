@@ -63,7 +63,7 @@
 #### use in project
 
 ```javascript
-import Picker from 'react-native-picker';
+import Picker from '@ste7en/react-native-picker';
 let data = [];
 for(var i=0;i<100;i++){
     data.push(i);
@@ -95,10 +95,10 @@ target 'YourTarget' do
     'Core',
     ...
     ]
-    pod 'Picker', :path => '../YOUR_REACT_NATIVE_PROJECT/node_modules/react-native-picker'
+    pod 'Picker', :path => '../YOUR_REACT_NATIVE_PROJECT/node_modules/@ste7en/react-native-picker'
 end
 ```
-After you have updated the `Podfile` of the existing app, you can install `react-native-picker` like below:
+After you have updated the `Podfile` of the existing app, you can install `@ste7en/react-native-picker` like below:
 ``` bash
 $ pod install
 ```
