@@ -1,6 +1,6 @@
 // Type definitions for react-native-picker
-// Project: https://github.com/beefe/react-native-picker
-// Definitions by: Kyle Roach <https://github.com/iRoachie>
+// Project: https://github.com/hukaibaihu/react-native-picker
+// Definitions by: Kyle Roach <https://github.com/hukaibaihu>
 // TypeScript Version: 2.3.2
 
 /**
@@ -8,16 +8,16 @@
  *
  * @interface PickerOptions
  */
-interface PickerOptions {
+interface PickerOptions<T = any> {
     /**
      * Items to be passed into the picker
      *
      * Default is an empty array
      *
-     * @type {any[]}
+     * @type {T[]}
      * @memberof PickerOptions
      */
-    pickerData?: any[]
+    pickerData?: T[];
 
     /**
      * The selected item in the picker
@@ -30,7 +30,7 @@ interface PickerOptions {
      * @type {any[]}
      * @memberof PickerOptions
      */
-    selectedValue?: any[]
+    selectedValue?: T[];
 
     /**
      * Title text shown at the top of the picker
@@ -40,7 +40,7 @@ interface PickerOptions {
      * @type {string}
      * @memberof PickerOptions
      */
-    pickerTitleText?: string
+    pickerTitleText?: string;
 
     /**
      * Text for the confirm button
@@ -50,7 +50,7 @@ interface PickerOptions {
      * @type {string}
      * @memberof PickerOptions
      */
-    pickerConfirmBtnText?: string
+    pickerConfirmBtnText?: string;
 
     /**
      * Text for the cancel button
@@ -60,7 +60,7 @@ interface PickerOptions {
      * @type {string}
      * @memberof PickerOptions
      */
-    pickerCancelBtnText?: string
+    pickerCancelBtnText?: string;
 
     /**
      * The color of the text for the confirm button
@@ -73,7 +73,7 @@ interface PickerOptions {
      * @type {number[]}
      * @memberof PickerOptions
      */
-    pickerConfirmBtnColor?: number[]
+    pickerConfirmBtnColor?: number[];
 
     /**
      * The color of the text for the cancel button
@@ -86,7 +86,7 @@ interface PickerOptions {
      * @type {number[]}
      * @memberof PickerOptions
      */
-    pickerCancelBtnColor?: number[]
+    pickerCancelBtnColor?: number[];
 
     /**
      * The color of the Title text
@@ -99,7 +99,7 @@ interface PickerOptions {
      * @type {number[]}
      * @memberof PickerOptions
      */
-    pickerTitleColor?: number[]
+    pickerTitleColor?: number[];
 
     /**
      * The background color of the toobar
@@ -112,7 +112,7 @@ interface PickerOptions {
      * @type {number[]}
      * @memberof PickerOptions
      */
-    pickerToolBarBg?: number[]
+    pickerToolBarBg?: number[];
 
     /**
      * Background color of the picker
@@ -125,7 +125,7 @@ interface PickerOptions {
      * @type {number[]}
      * @memberof PickerOptions
      */
-    pickerBg?: number[]
+    pickerBg?: number[];
 
 
     /**
@@ -136,7 +136,7 @@ interface PickerOptions {
      * @type {number}
      * @memberof PickerOptions
      */
-    pickerToolBarFontSize?: number
+    pickerToolBarFontSize?: number;
 
     /**
      * Font size of the items in the picker
@@ -146,7 +146,7 @@ interface PickerOptions {
      * @type {number}
      * @memberof PickerOptions
      */
-    pickerFontSize?: number
+    pickerFontSize?: number;
 
     /**
      * Row height of the items in the picker
@@ -156,7 +156,7 @@ interface PickerOptions {
      * @type {number}
      * @memberof PickerOptions
      */
-    pickerRowHeight?: number
+    pickerRowHeight?: number;
 
     /**
      * Color of the text for the items in the picker
@@ -169,29 +169,37 @@ interface PickerOptions {
      * @type {number[]}
      * @memberof PickerOptions
      */
-    pickerFontColor?: number[]
+    pickerFontColor?: number[];
+
+    /**
+     * @type {number}
+     * @memberof PickerOptions
+     */
+    pickerTextEllipsisLen?: number;
 
     /**
      * Event fired when user confirms the picker
      *
      * Returns the selected item
      *
-     * @param {any[]} item
+     * @param {T[]} item
+     * @param {number[]} index
      *
      * @memberof PickerOptions
      */
-    onPickerConfirm?(item: any[]): void
+    onPickerConfirm?(item: T[], index: number[]): void
 
     /**
      * Event fired when user cancels the picker
      *
      * Returns the selected item
      *
-     * @param {any[]} item
+     * @param {T[]} item
+     * @param {number[]} index
      *
      * @memberof PickerOptions
      */
-    onPickerCancel?(item: any[]): void
+    onPickerCancel?(item: T[], index: number[]): void
 
 
     /**
@@ -199,11 +207,12 @@ interface PickerOptions {
      *
      * Returns the selected item
      *
-     * @param {any[]} item
+     * @param {T[]} item
+     * @param {number[]} index
      *
      * @memberof PickerOptions
      */
-    onPickerSelect?(item: any[]): void
+    onPickerSelect?(item: T[], index: number[]): void
 }
 
 
@@ -212,11 +221,11 @@ export default class Picker {
      * Creates a new Picker objects
      *
      * @static
-     * @param {PickerOptions} options
+     * @param {PickerOptions<T>} options
      *
      * @memberof Picker
      */
-    static init(options: PickerOptions): void
+    static init<T = any>(options: PickerOptions<T>): void
 
     /**
      * Shows the picker
@@ -252,11 +261,11 @@ export default class Picker {
      * Example: ['selected']
      *
      * @static
-     * @param {any[]} item
+     * @param {T[]} item
      *
      * @memberof Picker
      */
-    static select(item: any[]): void
+    static select<T = any>(item: T[]): void
 
     /**
      * Checks if the picker is showing currently

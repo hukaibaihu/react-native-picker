@@ -1,6 +1,6 @@
 {
   "name": "@ste7en/react-native-picker",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A Native Picker with high performance.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -18,10 +18,13 @@
     "ios",
     "index.js",
     "index.d.ts",
-    "Picker.podspec",
-    "README.md"
+    "README.md",
+    "react-native-picker.podspec"
   ],
-  "author": "hukaibaihu",
+  "author": {
+    "name": "Ste7en",
+    "email": "986535362@qq.com"
+  },
   "license": "MIT",
   "homepage": "https://github.com/hukaibaihu/react-native-picker"
 }
